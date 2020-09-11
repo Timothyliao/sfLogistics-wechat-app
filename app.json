@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/deliveryGood/deliveryGood",
+    "pages/search/search",
+    "pages/myself/myself",
+    "pages/test/mm/mm",
+    "pages/stateValue/stateValue"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "顺丰保价",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#2c2c2c",
+    "list": [
+      {
+        "pagePath": "pages/deliveryGood/deliveryGood",
+        "text": "寄件",
+        "iconPath": "images/tabBar/deli01.png",
+        "selectedIconPath": "images/tabBar/deli02.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查件",
+        "iconPath": "images/tabBar/search01.png",
+        "selectedIconPath": "images/tabBar/search02.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "images/tabBar/me02.png",
+        "selectedIconPath": "images/tabBar/me01.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序请求获取您的当前位置"
+    }
+  }
+}
