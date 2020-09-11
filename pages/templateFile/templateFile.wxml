@@ -1,0 +1,86 @@
+<template name="logisticsMess">
+  <view wx:for="{{array}}" wx:key="">
+    <view class="message-box">
+      <view class="item">
+        <text>运单号：</text>
+        <text>{{item.truckingNum}}</text>
+      </view>
+      <view class="item customer">
+        <view>
+          <text>承运人：</text>
+          <text>{{item.sender}}</text>
+        </view>
+        <view>
+          <text>收件人：</text>
+          <text>{{item.receiver}}</text>
+        </view>
+      </view>
+      <view class="table item">
+        <view class="row-img">
+          <image src="{{item.tempPath}}"></image>
+        </view>
+        <view class="row">
+          <view class="mess">
+            <view class="long">物品名称：{{item.goodsName}}</view>
+          </view>
+          <view class="mess">
+            <view class="long">收货地址：{{item.address}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="item mm-box">
+        <image id="{{item.truckingNum}}" data-address="{{item.position}}" wx:if='{{item.isValue=="true"}}' bindtap="toMap" class="mm" src="{{bjPath}}"></image>
+        <image wx:else class="pu" src="{{puPath}}"></image>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="clause">
+  <block wx:for="{{datas}}" wx:key="">
+    <view class="text-p" style="text-indent: 27px;">
+      <text class="{{item.mark?'mark':item.pro==1?'mark-title':''}}">{{item.text}}</text>
+    </view>
+  </block>
+</template>
+
+<template name="timePicker">
+  <view class="add-tim" style="display:{{showModal}}">
+
+    <view class="time">
+
+      <view class="time-lef">
+        <view id="1" class="data-item" bindtap="selectTime" style="background-color:{{today}}">
+          <text>今天</text>
+        </view>
+
+        <view id="2" class="data-item" bindtap="selectTime" style="background-color:{{tom}}">
+          <text>明天</text>
+        </view>
+
+        <view id="3" class="data-item" bindtap="selectTime" style="background-color:{{thir}}">
+          <text>后天</text>
+        </view>
+
+
+      </view>
+
+      <scroll-view class="time-rig" scroll-y="true">
+        <block wx:for="{{time}}" wx:key="">
+          <view class="time-item" id="{{index}}" bindtap="selectHour">
+            <text style="color:{{item.txtColor}}">{{item.time}}</text>
+            <image hidden="{{item.hidden}}" src="../../images/address/begno.png"></image>
+          </view>
+        </block>
+      </scroll-view>
+
+    </view>
+
+
+    <view class="add">
+      <button class="btns" bindtap="sureTime">确认</button>
+    </view>
+
+  </view>
+
+</template>

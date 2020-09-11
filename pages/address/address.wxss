@@ -1,0 +1,36 @@
+.item-row{
+  width:100%;
+  box-sizing: border-box;
+  border-top: 1px solid #dfe6e9;
+  padding: 12px 0;
+  padding-left:8px;
+  display: table;
+}
+
+.item-col{
+  display: table-cell;
+  box-sizing: border-box;
+}
+
+.tb{
+  font-size: 15px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.img{
+  width:25px;
+  height:25px;
+  position: relative;
+  top: 4px;
+  left: 0px;
+}
+
+.submit-btn{
+  background-color: #c23616;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;
+  width: 90%;
+  margin-top:30px;
+}

@@ -1,0 +1,9 @@
+.title {
+  font-weight: 600;
+  font-size: 13px;
+}
+.title-null{
+  font-weight: 600;
+  font-size: 13px;
+  color: #c23616;
+}

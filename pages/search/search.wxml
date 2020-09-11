@@ -1,0 +1,43 @@
+<view class="container">
+
+  <view class="top">
+    <!--
+    <view class="search">
+      <input placeholder="请输入运单号" type="number" style="font-size:13px;width:80%;"></input>
+      <icon type="search" size="15" bindtap="tomap"></icon>
+    </view>
+    -->
+    <view class="description">
+      <text id="1" class="{{selectItem==1?'word-c':'word'}}" bindtap="select">我寄的({{deliver}})</text>
+      <text id="2" class="{{selectItem==2?'word-c':'word'}}" bindtap="select">我收的({{receive}})</text>
+    </view>
+  </view>
+
+  <view wx:if="{{selectItem==1}}" class="map">
+    <view>
+      <import src="../templateFile/templateFile" />
+      <template is="logisticsMess" data="{{array:messArray,puPath:puPath,bjPath:bjPath}}" />
+    </view>
+  </view>
+
+  <view wx:else class="map containerbox">
+    <view class="tips">
+      <text style="color:#ff3838;font-size:22px;">提示</text>
+      <text>保价物品需要扫描寄件时生成的二维码</text>
+      <text>普通物品需输入订单号来查询信息</text>
+    </view>
+    <form bindsubmit="search">
+      <view class="search-box">
+        <view id="sr">
+          <input type="number" name="trackingNum" placeholder="请输入订单号"></input>
+        </view>
+        <button id="ss" form-type="submit">
+          <image class="icon" src="../../images/deliver/search.png"></image>
+        </button>
+      </view>
+    </form>
+
+    <button class="btn" bindtap="scan">点击扫描二维码</button>
+  </view>
+
+</view>

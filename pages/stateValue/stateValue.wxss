@@ -1,0 +1,87 @@
+page {
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+.fill {
+  padding: 0 10px;
+}
+
+.input-item, .tips {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-item #input-tips, input-box, input {
+  display: inline-block;
+}
+
+.input-box {
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+
+.input-item input {
+  height: 100%;
+  width: 90%;
+}
+
+.tips {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tips text {
+  color: #c23616;
+  font-weight: 600;
+  display: block;
+  float: right;
+}
+
+.explain {
+  padding: 20px 0px;
+  margin: 15px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.footer button {
+  width: 200px;
+  height: 42px;
+  border-radius: 22px;
+  background-color: #c23616;
+  color: #fff;
+}
+
+.articl {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.articl text{
+  color: #ccc;
+  font-size: 14px;
+  word-break: break-all;
+  line-height: 18px;
+  margin-bottom: 14px;
+}

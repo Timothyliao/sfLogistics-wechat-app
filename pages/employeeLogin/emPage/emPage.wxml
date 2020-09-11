@@ -1,0 +1,13 @@
+<view class="box">
+  <button class="btn" bindtap="ks" wx:if="{{!start}}">开始配送</button>
+  <view class="location" wx:if="{{start}}">
+
+    <view class="item">
+      <image src="../../../images/login/smile.png" class="img"></image>
+    </view>
+    <view>
+      <text>正在持续定位</text>
+      <text>请勿在配送完成之前退出小程序...</text>
+    </view>
+  </view>
+</view>

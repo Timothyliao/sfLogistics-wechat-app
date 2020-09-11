@@ -1,0 +1,8 @@
+
+<view class="map_box">
+  <map id="navi_map" longitude="{{lo}}" latitude="{{la}}" scale="13" markers="{{markers}}" polyline="{{polyline}}"></map>
+</view>
+
+<view class="text_box">
+  <view class="text">{{distance}}</view>
+</view>

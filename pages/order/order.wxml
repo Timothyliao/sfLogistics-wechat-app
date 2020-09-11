@@ -1,0 +1,12 @@
+<view class="containerbox">
+  <view class="tips">
+    <text style="color:#ff3838;font-size:22px;margin-bottom:8px;">{{tip}}</text>
+    <text>{{tip01}}</text>
+    <text>{{tip02}}</text>
+    <text>{{tip03}}</text>
+  </view>
+  <button class="btn" bindtap="close">返回主页</button>
+  <view wx:if="{{isImg}}" class="imgbox" bindtap="saveImg">
+    <image src="{{img}}"></image>
+  </view>
+</view>

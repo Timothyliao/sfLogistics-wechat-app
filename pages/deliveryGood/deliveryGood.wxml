@@ -1,0 +1,42 @@
+<view class="boxx">
+  <swiper indicator-dots="true" autoplay="true" circular="true" indicator-active-color="#fff" indicator-color="#dfe6e9">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item style="border-radius: 5px;">
+        <image src="{{item}}" class="swiperImg"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="content">
+    <view class="mess-row" style="border-bottom:1px solid #8a8a8a;">
+      <view class="mess-col" style="border-right:1px solid #8a8a8a;" bindtap="normalGoods">
+        <view class="mess-row">
+          <view class="mess-col" style="width:40%">
+            <image src="../../images/deliveryGoods/courier.png" class="content-img"></image>
+          </view>
+          <view class="mess-col" style="width:60%">
+            <text>普通寄件</text>
+          </view>
+        </view>
+      </view>
+      <view class="mess-col" bindtap="valueGoods">
+        <view class="mess-row">
+          <view class="mess-col" style="width:40%">
+            <image src="../../images/deliveryGoods/supportValue.png" style="width:35px;height:35px" class="content-img"></image>
+          </view>
+          <view class="mess-col" style="width:60%">
+            <text>保价寄件</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="mess-row">
+      <view class="mess-col" style="border-right:1px solid #8a8a8a;text-align:center">
+        <text>更多功能敬请期待</text>
+      </view>
+      <view class="mess-col" style="text-align:center">
+        <text>更多功能敬请期待</text>
+      </view>
+    </view>
+  </view>
+</view>

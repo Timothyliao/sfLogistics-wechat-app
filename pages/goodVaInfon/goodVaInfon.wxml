@@ -1,0 +1,157 @@
+<view class="box" style="margin-top:5px;">
+  <view class="body-box">
+    <form class="messForm" id="form1" bindsubmit="save">
+      <view class="baseMess">
+        <view class="body-item">
+          <view>
+
+            <view class="mess-row">
+              <view class="show" style="width:100%">
+                <view class="mess-row" style="margin:5px 0;">
+                  <text style="font-weight:600;font-size:13px;">包裹类型</text>
+                </view>
+                <view class="mess-row">
+                  <view class="mess-col type" id="0" bindtap="typeClick">
+                    <text class="{{typeSelected0?'normalText':'selectText'}}">瓷器</text>
+                  </view>
+                  <view class="mess-col type" id="1" bindtap="typeClick">
+                    <text class="{{typeSelected1?'normalText':'selectText'}}">首饰</text>
+                  </view>
+                  <view class="mess-col type" id="2" bindtap="typeClick">
+                    <text class="{{typeSelected2?'normalText':'selectText'}}">电子产品</text>
+                  </view>
+                </view>
+                <view class="mess-row">
+                  <view class="mess-col type" id="3" bindtap="typeClick">
+                    <text class="{{typeSelected3?'normalText':'selectText'}}">衣服</text>
+                  </view>
+                  <view class="mess-col type" id="4" bindtap="typeClick">
+                    <text class="{{typeSelected4?'normalText':'selectText'}}">家具</text>
+                  </view>
+                  <view class="mess-col type" id="5" bindtap="typeClick">
+                    <text class="{{typeSelected5?'normalText':'selectText'}}">其他</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+            <view wx:if="{{isOther}}" class="mess-row">
+              <input name="goods" placeholder="请输入物品名称" placeholder-style="font-size:13px;" class="input"></input>
+            </view>
+
+            <view class="mess-row" style="margin:5px 0;">
+              <text style="font-weight:600;font-size:13px;">商品价值(不包括右方金额)</text>
+            </view>
+
+            <view class="mess-row">
+              <view class="mess-col type" id="v0">
+                <text class="{{value0?'normalText':'selectText'}}">0-1000元</text>
+              </view>
+              <view class="mess-col type" id="v1">
+                <text class="{{value1?'normalText':'selectText'}}">1000-5000元</text>
+              </view>
+              <view class="mess-col type" id="v2">
+                <text class="{{value2?'normalText':'selectText'}}">5000元以上</text>
+              </view>
+            </view>
+
+            <view class="mess-row">
+
+              <view wx:if="{{vGrade==1}}">
+                <view class="mess-row" style="margin:10px 0;">
+                  <text style="font-weight:600;font-size:13px;">上传发票照片</text>
+                </view>
+                <view id="c0" class="uploadPic" wx:if="{{noImg0}}" bindtap="chooseImg">
+                  <image src="../../images/deliver/picture.png"></image>
+                  <text style="font-size:12px;">上传图片</text>
+                </view>
+                <view wx:else class="showImg">
+                  <image src="{{uploadImg0}}"></image>
+                  <image id="0" src="../../images/deliver/delete.png" style="width:13px;height:13px;position: relative;right:-37px;top:-81px;background-color:#fff;border-radius: 50%" bindtap="deleteImg" mode="aspectFit"></image>
+                </view>
+              </view>
+
+              <view wx:if="{{vGrade==2}}">
+                <view class="mess-row" style="margin:10px 0;">
+                  <text style="font-weight:600;font-size:13px;">上传发票照片</text>
+                </view>
+                <view id="c1" class="uploadPic" wx:if="{{noImg1}}" bindtap="chooseImg">
+                  <image src="../../images/deliver/picture.png"></image>
+                  <text style="font-size:12px;">上传图片</text>
+                </view>
+                <view wx:else class="showImg">
+                  <image src="{{uploadImg1}}"></image>
+                  <image id="1" src="../../images/deliver/delete.png" style="width:13px;height:13px;position: relative;right:-37px;top:-81px;background-color:#fff;border-radius: 50%" bindtap="deleteImg" mode="aspectFit"></image>
+                </view>
+
+
+                <view class="mess-row" style="margin:10px 0;">
+                  <text style="font-weight:600;font-size:13px;">上传真伪鉴别书</text>
+                </view>
+                <view id="c2" class="uploadPic" wx:if="{{noImg2}}" bindtap="chooseImg">
+                  <image src="../../images/deliver/picture.png"></image>
+                  <text style="font-size:12px;">上传图片</text>
+                </view>
+                <view wx:else class="showImg">
+                  <image src="{{uploadImg2}}"></image>
+                  <image id="2" src="../../images/deliver/delete.png" style="width:13px;height:13px;position: relative;right:-37px;top:-81px;background-color:#fff;border-radius: 50%" bindtap="deleteImg" mode="aspectFit"></image>
+                </view>
+
+                <view class="mess-row" style="margin:5px 0;">
+                  <text style="font-weight:600;font-size:13px;">商品产地</text>
+                </view>
+                <view class="mess-row" style="margin:10px 0;">
+                  <input name="production" placeholder="请输入商品产地" placeholder-style="font-size:13px;" style="width:70%"   class="input-inline"></input>
+                </view>
+              </view>
+            </view>
+
+            <view class="mess-row" style="margin:5px 0;">
+              <text style="font-weight:600;font-size:13px;">商品重量</text>
+            </view>
+            <view class="mess-row">
+              <view class="mess-col" style="border-bottom:none;">
+                <input name="weight" class="input-inline" type="number" style="width:75px;margin-right:0;border-right:none;"></input>
+                <input class="input-inline" style="width:30px;margin:0;border-left:none;" placeholder="公斤" disabled="true"></input>
+              </view>
+            </view>
+
+            <view class="mess-row" style="margin:5px 0;">
+              <text style="font-weight:600;font-size:13px;">上传物品照片</text>
+            </view>
+            <view class="mess-row">
+              <view id="c3" class="uploadPic" wx:if="{{noImg3}}" bindtap="chooseImg">
+                <image src="../../images/deliver/picture.png"></image>
+                <text style="font-size:12px;">上传图片</text>
+              </view>
+              <view wx:else class="showImg">
+                <image src="{{uploadImg3}}"></image>
+                <image id="3" src="../../images/deliver/delete.png" style="width:13px;height:13px;position: relative;right:-37px;top:-81px;background-color:#fff;border-radius: 50%" bindtap="deleteImg" mode="aspectFit"></image>
+              </view>
+
+            </view>
+
+            <view class="mess-row" style="margin:5px 0;">
+              <text style="font-weight:600;font-size:13px;">备注</text>
+            </view>
+            <view class="mess-row">
+              <view class="mess-col" style="border-bottom:none;">
+                <textarea name="mark" class="lbarea" placeholder="给快递小哥捎些话吧" />
+              </view>
+            </view>
+            <view class="mess-row">
+              <view class="mess-col" style="border-bottom:none;padding-top:0;">
+                <text class="{{markTextIsClick?'mark-text2':'mark-text1'}}" bindtap="markTextClick">上门先联系</text>
+              </view>
+            </view>
+
+            <view class="mess-row" style="margin-top:25px;">
+              <button class="confirmBtn" form-type="submit">保存</button>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,165 @@
+page {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 8px 0 2px 0;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 60px;
+}
+
+.description {
+  margin-top: 8px;
+}
+
+.word {
+  font-size: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0 3px;
+  padding-bottom: 3px;
+  color: black;
+  font-weight: 600;
+}
+
+.word-c {
+  font-size: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0 3px;
+  padding-bottom: 3px;
+  color: #c23616;
+  border-bottom: 2px solid #c23616;
+  font-weight: 600;
+}
+
+
+.search {
+  box-sizing: border-box;
+  width: 70%;
+  padding: 5px 15px;
+  margin: 0 10px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: #f1f2f6;
+}
+
+.img{
+  width: 55px;
+  height: 55px;
+}
+
+
+text {
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.message-box {
+  width: 90%;
+  height: max-content;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+}
+
+.item {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.table, .customer {
+  display: table;
+  width: 100%;
+}
+.customer{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dfe6e9;
+}
+.customer view {
+  display: table-cell;
+  width: 50%;
+  text-align: left;
+}
+
+.table .row-img, .row {
+  display: table-cell;
+  text-align: left;
+}
+
+.table .row-img {
+  vertical-align: middle;
+}
+
+.table .row {
+  padding-left: 20px;
+}
+
+image {
+  width: 55px;
+  height: 55px;
+}
+
+.mess {
+  line-height: 25px;
+}
+
+.long {
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.mm-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mm {
+  height: 30px;
+  width: 30px;
+}
+
+.pu{
+  height: 25px;
+  width: 25px;
+}

@@ -1,0 +1,133 @@
+<view class="hide-bg" hidden="{{hidden}}" bindtap="clickHidden">
+</view>
+
+<view class="box">
+  <mp-toptips msg="{{msg}}" type="info" show="{{error}}"></mp-toptips>
+  <view class="body-box">
+    <form class="messForm" id="form1">
+
+      <view class="addressMess">
+        <view class="body-item" style="border-bottom: 1px solid #f1f2f6;" bindtap="fillAddress" id="0">
+          <view class="message">
+            <view>
+              <text style="font-weight:600;font-size:14px">{{deliverNmae}}</text>
+            </view>
+            <view>
+              <text style="overflow: hidden;text-overflow: ellipsis;font-size:12px;">{{deliverAddress}}</text>
+            </view>
+          </view>
+          <image src="../../images/deliver/deliver.png" class="img"></image>
+        </view>
+
+        <view class="body-item" bindtap="fillAddress" id="1">
+          <view class="message">
+            <view>
+              <text style="font-weight:600;font-size:14px">{{receiveName}}</text>
+            </view>
+            <view>
+              <text style="overflow: hidden;text-overflow: ellipsis;font-size:12px">{{receiveAddress}}</text>
+            </view>
+          </view>
+          <image src="../../images/deliver/receive.png" class="img"></image>
+        </view>
+      </view>
+
+      <view class="baseMess">
+        <view class="body-item">
+          <view class="mess-row" bindtap="pickTime">
+            <view class="mess-col" style="border-bottom:none;">
+              <text style="font-weight:600;">期待上门时间</text>
+            </view>
+            <view class="mess-col" style="text-align:right;border-bottom:none;">
+              <text style="color: #8a8a8a;">{{pickTime}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="baseMess" style="display:{{showSelectValue}}">
+        <view class="body-item">
+          <view class="mess-row" bindtap="selectValue">
+            <view class="mess-col" style="border-bottom:none;">
+              <text style="font-weight:600;">声明物品价值<text class="statement">必填</text></text>
+            </view>
+            <view class="mess-col" style="text-align:right;border-bottom:none;">
+              <text style="color: #8a8a8a;">{{goodsValue}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+      <view class="baseMess" style="display:{{showSelectValue}}">
+        <view class="body-item">
+          <view class="mess-row">
+            <view class="mess-col" style="border-bottom:none;">
+              <text style="font-weight:600;">是否购买第三方保险</text>
+            </view>
+            <view class="mess-col" style="text-align:right;border-bottom:none;">
+              <switch color="#c23616" checked="{{tpValue}}" bindchange="{{selectTP}}"/>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+      <view class="baseMess">
+        <view class="body-item">
+          <view class="mess-row" bindtap="showGoods">
+            <view class="mess-col" style="border-bottom:none;">
+              <text style="font-weight:600;">请填写物品信息<text class="statement">必填</text></text>
+            </view>
+            <view class="mess-col" style="text-align:right;border-bottom:none;">
+              <text style="color: #8a8a8a;">{{goodsType}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view>
+        <label for="radioImg1" wx:if="{{clauseRead}}" bindtap="readClause">
+          <image id="radioImg1" src="../../images/deliver/correct.png" style="width:20px;height:20px;background-color:#fff;border-radius:50%;position:relative;top:3px;margin-left:5px;"></image>
+          <text style="margin-left:10px;font-size:14px;color:#8a8a8a;">我已阅读并同意</text>
+        </label>
+        <label for="radioImg2" wx:else bindtap="readClause">
+          <view id="radioImg2" style="width:18px;height:18px;background-color:#fff;border-radius:50%;border:1px solid black;display:inline-block;position:relative;top:3px;margin-left:5px;"></view>
+          <text style="margin-left:10px;font-size:14px;color:#8a8a8a;">我已阅读并同意</text>
+        </label>
+        <text style="font-size:15px;font-weight:600;" bindtap="openClause">《电子运单契约条款》</text>
+      </view>
+
+      <view class="confirmOrder">
+        <view class="body-item">
+          <view class="mess-row">
+            <view class="mess-col" style="width:65%;border:none;">
+              <text>价值预估：<text class="mark" style="font-size:18px">{{goodsPrice}}</text></text>
+              <text style="color:#8a8a8a;font-size:12px">\n最终价值以快递小哥核实为准</text>
+            </view>
+            <view class="mess-col" style="width:35%;border:none;text-align:right">
+              <button class="confirmBtn" style="width:100%" disabled="{{!clauseRead}}" bindtap="ordered">{{orderBtn}}</button>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{readingClause}}" class="cover-page">
+        <view class="cover-clause">
+          <text class="clauseTitle">电子运单契约条款</text>
+          <scroll-view scroll-y="true" class="scroll-clause" lower-threshold="20" bindscrolltolower="scrollBottom">
+            <import src="../templateFile/templateFile" />
+            <template is="clause" data="{{datas:file}}" />
+          </scroll-view>
+          <button disabled="{{useClauseBtn}}" class="clauseBtn" bindtap="completeRead">{{readBtn}}</button>
+        </view>
+      </view>
+
+    </form>
+
+
+  </view>
+</view>
+
+<import src="../templateFile/templateFile" />
+<template is="timePicker" data="{{time:time,showModal:showModal,today:today,tom:tom,thir:thir}}" />

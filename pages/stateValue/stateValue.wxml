@@ -1,0 +1,36 @@
+<view class="box">
+
+  <view class="fill">
+    <view class="input-item">
+      <text id="input-tips">声明价值：</text>
+      <view class="input-box">
+        <input placeholder="1-500000的整数" type="number" maxlength="6" bindinput="getValue"></input>
+        <text>元</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="explain">
+    <text>说明：</text>
+    <view class="articl">
+      <text>{{explain}}</text>
+    </view>
+    <view class="articl" style="margin-top:25px">
+      <picker bindchange="pickRisk" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          <view>请选择风险规避系数（10-3）</view>
+        </view>
+        <text>当前选择：{{array[index]}}</text>
+      </picker>
+    </view>
+
+    <view style="margin-top:25px">
+      <text style="color:#e84118">费用：{{cost}}元</text>
+    </view>
+  </view>
+  <view class="footer">
+    <button bindtap="sureValue">确认</button>
+  </view>
+
+</view>

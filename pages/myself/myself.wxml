@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="bg-top">
+
+    <view class="mess-box">
+      <view class="mess-item" style="width:30%;">
+        <image src="{{txUrl}}" class="img"></image>
+      </view>
+      <view class="mess-item" style="width:50%;">
+        <text class="loginT">{{name}}</text>
+      </view>
+      <view class="mess-item" style="width:20%;" bindtap="login">
+        <text class="loginO">退出</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="bg-bottom">
+    <view class="mess-row">
+      <view id="s" class="mess-item" style="width:25%;text-align:center;" bindtap="search">
+        <image class="btImg" src="../../images/login/sj.png"></image>
+        <text class="hint">我收的(<text>{{receive}}</text>)</text>
+      </view>
+      <view id="j" class="mess-item" style="width:25%;text-align:center;" bindtap="search">
+        <image class="btImg" src="../../images/login/jj.png"></image>
+        <text class="hint">我寄的(<text>{{deliver}}</text>)</text>
+      </view>
+      <view class="mess-item" style="width:25%;text-align:center;">
+        <image class="btImg" src="../../images/login/jf.png"></image>
+        <text class="hint">积分(<text>{{discount}}</text>)</text>
+      </view>
+      <view class="mess-item" style="width:25%;text-align:center;">
+        <image class="btImg" src="../../images/login/yhj.png"></image>
+        <text class="hint">优惠券(<text>{{points}}</text>)</text>
+      </view>
+    </view>
+
+    <view class="divide-line"></view>
+  </view>
+</view>

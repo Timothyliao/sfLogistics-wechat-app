@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="map">
+    <import src="../../templateFile/templateFile" />
+    <template is="logisticsMess" data="{{array:messArray,puPath:puPath,bjPath:bjPath}}" />
+  </view>
+</view>

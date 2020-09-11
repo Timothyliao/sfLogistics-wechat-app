@@ -1,0 +1,35 @@
+
+<mp-toptips msg="{{msg}}" type="info" show="{{error}}"></mp-toptips>
+<form class="box" bindsubmit="submit">
+  <view class="item-row">
+    <view class="item-col" style="width:50%">
+      <input name="name" placeholder="姓名" class="tb" placeholder-style="padding-left:8px"></input>
+    </view>
+    <view class="item-col" style="width:50%" style="border-left: 1px solid #b2bec3;">
+      <input name="tel" placeholder="电话" type="number" class="tb" placeholder-style="padding-left:8px" style="padding-left:8px;"></input>
+    </view>
+  </view>
+  <view class="item-row">
+    <view class="item-col" style="width:80%">
+      <input name="ssq" placeholder="省市区" class="tb" value="{{ssq}}" placeholder-style="padding-left:8px"></input>
+    </view>
+    <view class="item-col" style="width:20%;">
+      <image class="img" src="../../images/address/location.png" bindtap="chooseLocation"></image>
+    </view>
+  </view>
+  <view class="item-row">
+    <view class="item-col" style="width:100%">
+      <input name="detailInfo" placeholder="详细地址" value="{{detailedInfo}}" class="tb" placeholder-style="padding-left:8px">
+      </input>
+    </view>
+  </view>
+  <view class="item-row">
+    <view class="item-col" style="width:100%">
+      <input name="houseNum" placeholder="公司名称、门牌地址(选填)" class="tb" placeholder-style="padding-left:8px">
+      </input>
+    </view>
+  </view>
+  <view class="item-row">
+    <button form-type="submit" class="submit-btn">保存</button>
+  </view>
+</form>

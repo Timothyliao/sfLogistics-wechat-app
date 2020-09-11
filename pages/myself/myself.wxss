@@ -1,0 +1,116 @@
+page {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f6fa;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-top {
+  width: 100%;
+  height: 20%;
+  box-sizing: border-box;
+  background-color: #4bcffa;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  text-align: center;
+}
+
+.bg-bottom {
+  width: 100%;
+  height: 80%;
+  box-sizing: border-box;
+  background-color: #f5f6fa;
+  padding-top: 8%;
+}
+
+.mess-box {
+  width: 90%;
+  height: max-content;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: auto;
+  top: 85%;
+  transform: translate(0, -50%);
+  box-shadow: 10px 0 20px 0 rgba(30, 39, 46, 0.15);
+  display: table;
+  vertical-align: middle;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.mess-row {
+  width: 90%;
+  background-color: #f5f6fa;
+  box-sizing: border-box;
+  margin: auto;
+  top: 50%;
+  display: table;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.mess-item {
+  display: table-cell;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.img {
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  transform: translate(-50%,0);
+}
+
+.btImg{
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.loginT,.loginO {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 幼圆;
+}
+
+.loginO{
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #EA2027;
+  background-color: #f1f2f3;
+}
+
+.hint {
+  font-size: 13px;
+}
+
+.hint text {
+  color: #c23616;
+}
+
+.divide-line{
+  width: 100%;
+  height: 8px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 10px 0;
+}

@@ -1,0 +1,88 @@
+<view class="box" style="margin-top:5px;">
+  <view class="body-box">
+    <form class="messForm" id="form1" bindsubmit="submit">
+      <view class="baseMess">
+        <view class="body-item">
+          <view>
+            <view class="mess-row">
+              <view class="show" style="width:100%">
+                <view class="mess-row" style="margin:5px 0;">
+                  <text class="{{type?'title':'title-null'}}">包裹类型</text>
+                </view>
+                <view class="mess-row">
+                  <view class="mess-col type" id="0" bindtap="typeClick">
+                    <text class="{{typeSelected0?'normalText':'selectText'}}">日用品</text>
+                  </view>
+                  <view class="mess-col type" id="1" bindtap="typeClick">
+                    <text class="{{typeSelected1?'normalText':'selectText'}}">食品</text>
+                  </view>
+                  <view class="mess-col type" id="2" bindtap="typeClick">
+                    <text class="{{typeSelected2?'normalText':'selectText'}}">文件</text>
+                  </view>
+                </view>
+                <view class="mess-row">
+                  <view class="mess-col type" id="3" bindtap="typeClick">
+                    <text class="{{typeSelected3?'normalText':'selectText'}}">数码产品</text>
+                  </view>
+                  <view class="mess-col type" id="4" bindtap="typeClick">
+                    <text class="{{typeSelected4?'normalText':'selectText'}}">农物</text>
+                  </view>
+                  <view class="mess-col type" id="5" bindtap="typeClick">
+                    <text class="{{typeSelected5?'normalText':'selectText'}}">其他</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view wx:if="{{isOther}}" class="mess-row">
+              <input name="goods" placeholder="请输入物品名称" placeholder-style="font-size:13px;" class="input"></input>
+            </view>
+            <view class="mess-row" style="margin:5px 0;">
+              <text class="{{weight?'title':'title-null'}}">商品重量</text>
+            </view>
+            <view class="mess-row">
+              <view class="mess-col" style="border-bottom:none;">
+                <input name="weight" class="input-inline" type="number" style="width:75px;margin-right:0;border-right:none;"></input>
+                <input class="input-inline" style="width:30px;margin:0;border-left:none;" placeholder="公斤" disabled="true"></input>
+              </view>
+            </view>
+
+            <view class="mess-row" style="margin:5px 0;">
+              <text  class="{{photo?'title':'title-null'}}">上传物品照片</text>
+            </view>
+            <view class="mess-row">
+
+              <view class="uploadPic" wx:if="{{noImg}}" bindtap="chooseImg">
+                <image src="../../images/deliver/picture.png"></image>
+                <text style="font-size:12px;">上传图片</text>
+              </view>
+              <view wx:else class="showImg">
+                <image src="{{uploadImg}}"></image>
+                <image src="../../images/deliver/delete.png" style="width:13px;height:13px;position: relative;right:-37px;top:-81px;background-color:#fff;border-radius: 50%" bindtap="deleteImg" mode="aspectFit"></image>
+              </view>
+
+            </view>
+
+            <view class="mess-row" style="margin:5px 0;">
+              <text style="font-weight:600;font-size:13px;">备注</text>
+            </view>
+            <view class="mess-row">
+              <view class="mess-col" style="border-bottom:none;">
+                <textarea name="mark" class="lbarea" placeholder="给快递小哥捎些话吧" />
+              </view>
+            </view>
+            <view class="mess-row">
+              <view class="mess-col" style="border-bottom:none;padding-top:0;">
+                <text class="{{markTextIsClick?'mark-text2':'mark-text1'}}" bindtap="markTextClick">上门先联系</text>
+              </view>
+            </view>
+
+            <view class="mess-row" style="margin-top:25px;">
+              <button form-type="submit" class="confirmBtn">保存</button>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

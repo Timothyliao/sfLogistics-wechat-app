@@ -1,0 +1,18 @@
+<view class="container">
+
+  <view class="logo">
+    <image src="../../images/login/logo.png" class="img"></image>
+  </view>
+
+
+  <form class="message" bindsubmit="login">
+    <input name="account" placeholder="账号" type="number" class="row tb"></input>
+    <input name="paw" placeholder="密码" type="password" class="row tb"></input>
+    <view class="code">
+      <input name="code" placeholder="验证码" class="row tb icode"></input>
+      <input class="row tb icode txt" value="{{codeNum}}" disabled="true" bindtap="reflash"></input>
+    </view>
+    <button class="row btn" form-type="submit">登录</button>
+  </form>
+
+</view>

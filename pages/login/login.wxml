@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="box-top">
+    <view class="logo-box">
+      <image class="img" src="../../images/login/logo.png"></image>
+      <text>顺丰保价</text>
+    </view>
+  </view>
+
+  <view class="box-middle">
+    <button class="btn" hover-class="btn-hover" open-type="getUserInfo" bindgetuserinfo="myLogin">
+      <image class="btnimg" src="../../images/login/weChat.png"></image>
+      <text>使用微信快捷方式登录</text>
+    </button>
+    <view class="employeeLogin" style="margin:auto;margin-top:15px;">
+      <text bindtap="toemployee">员工登录</text>
+    </view>
+  </view>
+
+  <view class="box-bottom">
+    <text>copyright©sfInsurance</text>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+.boxx {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.swiperImg {
+  width: 100%;
+}
+
+
+.content{
+  box-shadow: 0 0 15px 0 rgba(223, 230, 233,0.7);
+  width: 100%;
+  height: max-content;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px 10px 30px 10px;
+}
+
+.content-img{
+  width:42px;
+  height: 42px;
+}
+
+.mess-col{
+  padding-left:12px;
+  vertical-align: middle;
+}
+
+.mess-col{
+  border-bottom: none;
+}
