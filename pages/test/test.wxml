@@ -1,0 +1,3 @@
+<form>
+  <button bindtap="xxx">click</button>
+</form>
